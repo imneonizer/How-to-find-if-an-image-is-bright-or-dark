@@ -36,7 +36,7 @@ Simply press esc Key to test on another image that i have provided
 ### Actual image Low Resolution
 ![Original image](https://github.com/imneonizer/How-to-find-if-an-image-is-bright-or-dark/blob/master/images/low_size_dark.jpg)
 
-### Here is the little code snippet
+### Here is a little code snippet
 >to help you understand whats going on behind the scenes
 ```
 #-----Splitting the LAB image to different channels-------------------------
