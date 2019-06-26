@@ -39,6 +39,12 @@ Simply press esc Key to test on another image that i have provided
 ### Here is a little code snippet
 >to help you understand whats going on behind the scenes
 ```
+#------------------------Reading image--------------------------------------
+img = cv2.imread('images/1.png')
+
+#-----Converting image to LAB Color model----------------------------------- 
+lab= cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+
 #-----Splitting the LAB image to different channels-------------------------
 l, a, b = cv2.split(lab)
 
