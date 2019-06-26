@@ -36,6 +36,46 @@ Simply press esc Key to test on another image that i have provided
 ### Actual image Low Resolution
 ![Original image](https://github.com/imneonizer/How-to-find-if-an-image-is-bright-or-dark/blob/master/images/low_size_dark.jpg)
 
+### Here is the little code snippet
+##### to help you understand whats going behind the scenes
+```
+#-----Splitting the LAB image to different channels-------------------------
+	l, a, b = cv2.split(lab)
+
+	#-----Finding average lightness level in image by fixing some points--------
+	y,x,z = img.shape #height, width of image
+	print('>> Image Dimension => X:{}, Y:{}'.format(x,y))
+	#Now we will decide some dynamic points on image for checking light intensity
+	l_blur = cv2.GaussianBlur(l, (11, 11), 5)
+	maxval = []
+	count_percent = 3 #percent of total image
+	count_percent = count_percent/100
+	row_percent = int(count_percent*x) #1% of total pixels widthwise
+	column_percent = int(count_percent*y) #1% of total pizel height wise
+	for i in range(1,x-1):
+		if i%row_percent == 0:
+			for j in range(1, y-1):
+				if j%column_percent == 0:
+					pix_cord = (i,j)
+					
+					cv2.circle(img_dot, (int(i), int(j)), 5, (0, 255, 0), 2)
+					img_segment = l_blur[i:i+3, j:j+3]
+					(minVal, maxVal, minLoc, maxLoc) = cv2.minMaxLoc(img_segment)
+					maxval.append(maxVal)
+
+	avg_maxval = round(sum(maxval) / len(maxval))
+	print('>> Total points: {}'.format(len(maxval)))
+	print('>> Average Brightness: {}'.format(avg_maxval))
+```
+>firstly we are converting the image into L*A*B color spaces
+>did a slight Gaussian Blurring to cancel out the Noises.
+>then splitting it to extract the ``L`` Channel which is responsible for the brightness levels
+>after which we calculate number of points we are going to check
+>rowise and column wise
+>in our case we are taking every 1% pizel out of total pizels
+>and finally we detect brightness level at that point
+>in the end we just average out all the values
+
 Hope you enjoyed today's tutorial. Don't forget to star the repository.
 if you have any query, feel free to ask.
 Join me here at ``insta/the.nitin.rai``
