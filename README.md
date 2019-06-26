@@ -18,7 +18,7 @@ Certain regions of images will be selected to pickup the brightness level and fi
 >> pip install imutils
 ```
 ### lets move to the Practical hands on
-##### Step 1: calculate_brightness.py
+##### Step 1: Run calculate_brightness.py
 You will see output something similar to this
 ![output](https://github.com/imneonizer/How-to-find-if-an-image-is-bright-or-dark/blob/master/assets/1.jpg)
 ##### Step 2: Lets try a different image
@@ -37,6 +37,8 @@ Simply press esc Key to test on another image that i have provided
 ![Original image](https://github.com/imneonizer/How-to-find-if-an-image-is-bright-or-dark/blob/master/images/low_size_dark.jpg)
 
 Hope you enjoyed today's tutorial. Don't forget to star the repository.
+
 if you have any query, feel free to ask.
 Join me here at ``insta/the.nitin.rai``
+
 Connect me at ``mneonizer@gmail.com``
