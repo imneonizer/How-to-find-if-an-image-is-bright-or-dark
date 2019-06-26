@@ -37,8 +37,6 @@ Simply press esc Key to test on another image that i have provided
 ![Original image](https://github.com/imneonizer/How-to-find-if-an-image-is-bright-or-dark/blob/master/images/low_size_dark.jpg)
 
 Hope you enjoyed today's tutorial. Don't forget to star the repository.
-
 if you have any query, feel free to ask.
 Join me here at ``insta/the.nitin.rai``
-
 Connect me at ``mneonizer@gmail.com``
