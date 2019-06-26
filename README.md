@@ -41,6 +41,7 @@ Simply press esc Key to test on another image that i have provided
 ```
 #------------------------Reading image--------------------------------------
 img = cv2.imread('images/1.png')
+img_dot = img
 
 #-----Converting image to LAB Color model----------------------------------- 
 lab= cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
