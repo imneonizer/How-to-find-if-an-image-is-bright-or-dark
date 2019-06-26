@@ -2,7 +2,7 @@
 ## Idea 
 Certain regions of images will be selected to pickup the brightness level and finally averaging those value will give the average brightness level of the image.
 
->Finally after getting a average brightness level balue we can decide threshold
+>Finally after getting an average brightness level value we can decide a threshold
 >below which images will be considered as dark
 >one more interesting this is, the code is highly dynamic
 >meaning we can modify it to pick only certain percent of points from the image
